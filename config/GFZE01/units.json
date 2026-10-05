@@ -21119,6 +21119,19 @@
   },
   {
     "module": "main",
+    "source": "dol/fn_8006A768.c",
+    "symbols": [
+      "fn_8006A768"
+    ],
+    "status": "matching",
+    "mw_version": "GC/1.2.5",
+    "extra_cflags": [
+      "-char",
+      "unsigned"
+    ]
+  },
+  {
+    "module": "main",
     "source": "dol/fn_8006A998.c",
     "symbols": [
       "fn_8006A998"
