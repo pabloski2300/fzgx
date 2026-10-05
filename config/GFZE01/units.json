@@ -16642,6 +16642,19 @@
   },
   {
     "module": "main",
+    "source": "dol/fn_80036AC4.c",
+    "symbols": [
+      "fn_80036AC4"
+    ],
+    "status": "matching",
+    "mw_version": null,
+    "extra_cflags": [],
+    "pool": {
+      "@32": "lbl_801A70F0"
+    }
+  },
+  {
+    "module": "main",
     "source": "dol/fn_80036EB4.c",
     "symbols": [
       "fn_80036EB4"
