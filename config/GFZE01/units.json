@@ -24525,6 +24525,16 @@
   },
   {
     "module": "main",
+    "source": "dol/fn_8008E9B4.c",
+    "symbols": [
+      "fn_8008E9B4"
+    ],
+    "status": "matching",
+    "mw_version": null,
+    "extra_cflags": []
+  },
+  {
+    "module": "main",
     "source": "dol/fn_8008EB4C.c",
     "symbols": [
       "fn_8008EB4C"
