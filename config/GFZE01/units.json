@@ -21106,6 +21106,19 @@
   },
   {
     "module": "main",
+    "source": "dol/fn_8006A554.c",
+    "symbols": [
+      "fn_8006A554"
+    ],
+    "status": "matching",
+    "mw_version": null,
+    "extra_cflags": [
+      "-char",
+      "unsigned"
+    ]
+  },
+  {
+    "module": "main",
     "source": "dol/fn_8006A998.c",
     "symbols": [
       "fn_8006A998"
