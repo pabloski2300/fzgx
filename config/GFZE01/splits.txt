@@ -5360,3 +5360,6 @@ dol/longlong2str.c:
 
 dol/fn_8004FF68.c:
 	.text       start:0x8004FF68 end:0x80050180 align:4
+
+dol/fn_800502A0.c:
+	.text       start:0x800502A0 end:0x800504BC align:4

@@ -19344,6 +19344,23 @@
   },
   {
     "module": "main",
+    "source": "dol/fn_800502A0.c",
+    "symbols": [
+      "fn_800502A0"
+    ],
+    "status": "matching",
+    "mw_version": "GC/1.3.2",
+    "extra_cflags": [
+      "-sdata",
+      "0",
+      "-sdata2",
+      "0",
+      "-use_lmw_stmw",
+      "on"
+    ]
+  },
+  {
+    "module": "main",
     "source": "dol/fn_800504BC.c",
     "symbols": [
       "fn_800504BC"
