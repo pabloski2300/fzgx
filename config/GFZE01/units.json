@@ -24793,6 +24793,19 @@
   },
   {
     "module": "main",
+    "source": "dol/long2str.c",
+    "symbols": [
+      "long2str"
+    ],
+    "status": "matching",
+    "mw_version": "GC/2.6",
+    "extra_cflags": [],
+    "pool": {
+      "@62": "jumptable_8015B4BC"
+    }
+  },
+  {
+    "module": "main",
     "source": "dol/main.c",
     "symbols": [
       "main"

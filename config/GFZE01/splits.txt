@@ -5351,3 +5351,6 @@ dol/fn_8007ADF0.c:
 
 dol/fn_8007A710.c:
 	.text       start:0x8007A710 end:0x8007A9A4 align:4
+
+dol/long2str.c:
+	.text       start:0x80082040 end:0x80082298 align:4
