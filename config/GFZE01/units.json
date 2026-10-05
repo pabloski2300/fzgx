@@ -49981,6 +49981,23 @@
   },
   {
     "module": "main_rel",
+    "source": "rel/main_rel/spline/fn_1_FA89C.c",
+    "symbols": [
+      "fn_1_FA89C"
+    ],
+    "status": "matching",
+    "mw_version": null,
+    "extra_cflags": [],
+    "tu": "rel/main_rel/spline.c",
+    "pool": {
+      "@14": "lbl_1_rodata_7490",
+      "@17": "lbl_1_rodata_7498",
+      "@20": "lbl_1_rodata_74A0",
+      "@15": "lbl_1_rodata_7494"
+    }
+  },
+  {
+    "module": "main_rel",
     "source": "rel/main_rel/spline/fn_1_FB0A8.c",
     "symbols": [
       "fn_1_FB0A8"
