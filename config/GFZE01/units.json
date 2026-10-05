@@ -927,6 +927,25 @@
   },
   {
     "module": "customize",
+    "source": "rel/customize/customize/fn_3_BF1C.c",
+    "symbols": [
+      "fn_3_BF1C"
+    ],
+    "status": "matching",
+    "mw_version": null,
+    "extra_cflags": [],
+    "tu": "rel/customize/customize.c",
+    "pool": {
+      "...rodata.0": "lbl_3_rodata_270",
+      "@6": "lbl_3_rodata_270",
+      "@17": "lbl_3_rodata_270+0x4",
+      "@18": "lbl_3_rodata_270+0x8",
+      "@19": "lbl_3_rodata_270+0xC",
+      "@20": "lbl_3_rodata_270+0x10"
+    }
+  },
+  {
+    "module": "customize",
     "source": "rel/customize/customize/fn_3_C128.c",
     "symbols": [
       "fn_3_C128"
