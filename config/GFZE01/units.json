@@ -16853,6 +16853,16 @@
   },
   {
     "module": "main",
+    "source": "dol/fn_8003A1CC.c",
+    "symbols": [
+      "fn_8003A1CC"
+    ],
+    "status": "matching",
+    "mw_version": null,
+    "extra_cflags": []
+  },
+  {
+    "module": "main",
     "source": "dol/fn_8003A760.c",
     "symbols": [
       "fn_8003A760"
