@@ -6506,3 +6506,6 @@ rel/main_rel/font/fn_1_49B70.c:
 
 rel/main_rel/bg_cas/fn_1_FCFA4.c:
 	.text       start:0x000FCFA4 end:0x000FD1D4 align:4
+
+rel/main_rel/memcard/fn_1_C1ACC.c:
+	.text       start:0x000C1ACC end:0x000C1CFC align:4
