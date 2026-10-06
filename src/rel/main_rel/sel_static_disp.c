@@ -927,6 +927,114 @@ void fn_1_135894(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, voi
 }
 /* fzgx:end fn_1_135894 */
 
+/* fzgx:begin fn_1_135D7C noprologue */
+#include "types.h"
+#include "font.h"
+
+typedef struct Fn1_135D7C_Entry {
+    u32 flags;
+    u8 pad_4[0x819C];
+    u8 glyph;
+    u8 pad_81A1[0x3];
+    u8 unk_81A4;
+    u8 pad_81A5[0x7];
+    u8 unk_81AC;
+    u8 pad_81AD[0x7];
+    u8 unk_81B4;
+    u8 pad_81B5[0xB];
+} Fn1_135D7C_Entry;
+
+extern char lbl_1_data_41A30[]; /* "%s\n" */
+extern const FontDrawPacket lbl_1_rodata_26F8; /* default glyph packet */
+extern Fn1_135D7C_Entry *fn_1_12F118(void);
+extern Fn1_135D7C_Entry *fn_1_36AD0(void);
+extern void fn_1_49410(void);
+extern void fn_1_495C8(s32);
+extern void fn_1_494DC(s16);
+extern void fn_1_496FC(f32, f32);
+extern void fn_1_4954C(f32);
+extern void fn_1_4955C(f32, f32);
+extern void fn_1_4962C(void);
+extern char *fn_1_14FEAC(u8, u8, u8, char *, u32);
+extern void fn_1_4CF3C(f32, const char *, ...);
+
+#define FN_1_135D7C_DRAW_GLYPH(glyph)                                                                      {                                                                                                          packet = lbl_1_rodata_26F8;                                                                            if ((glyph) < 0) {                                                                                         index = 0;                                                                                         } else {                                                                                                   index = 40;                                                                                            if ((u32)(glyph) <= 40) {                                                                                  index = (glyph);                                                                                   }                                                                                                  }                                                                                                      packet.image = images[index];                                                                          packet.x = x;                                                                                          packet.y = y;                                                                                          packet.z = z;                                                                                          packet.scale_x *= scale_x;                                                                             packet.scale_y *= scale_y;                                                                             packet.flags = type;                                                                                   fn_1_4F734(&packet);                                                                               }
+
+void fn_1_135D7C(s16 x, s16 y, s32 type, s16 glyph, u32 arg4, s16 slot, s32 hidden, f32 scale_x, f32 scale_y,
+                 f32 z) {
+    u32 images[41] = {
+        0x4A00, 0x5400, 0x3800, 0x3E00, 0x3700, 0x5500, 0x3000, 0x3500, 0x3A00, 0x4000, 0x4400,
+        0x5000, 0x3300, 0x2E00, 0x3100, 0x4F00, 0x3900, 0x3D00, 0x4C00, 0x3F00, 0x4800, 0x5200,
+        0x4500, 0x5300, 0x3C00, 0x5600, 0x4300, 0x4200, 0x3200, 0x2F00, 0x3400, 0x3600, 0x4D00,
+        0x4600, 0x4100, 0x5100, 0x4E00, 0x4700, 0x3B00, 0x4B00, 0x4900,
+    };
+    FontDrawPacket packet;
+    char buf[32];
+    u32 index;
+    Fn1_135D7C_Entry *base;
+    Fn1_135D7C_Entry *entry;
+
+    if (glyph < 0) {
+        return;
+    }
+    if (hidden != 0) {
+        return;
+    }
+    if (glyph >= 0x29) {
+        base = fn_1_12F118();
+        if (base == fn_1_36AD0()) {
+            entry = &base[slot];
+        } else {
+            entry = &base[glyph - 0x29];
+        }
+        if (!(entry->flags & 0x40000000)) {
+            glyph = entry->glyph;
+            FN_1_135D7C_DRAW_GLYPH(glyph);
+            return;
+        }
+        fn_1_49410();
+        switch (type) {
+        case 5:
+            fn_1_495C8(0);
+            break;
+        case 6:
+            fn_1_495C8(8);
+            break;
+        case 7:
+            fn_1_495C8(16);
+            break;
+        case 9:
+            fn_1_495C8(1);
+            break;
+        case 10:
+            fn_1_495C8(9);
+            break;
+        case 11:
+            fn_1_495C8(17);
+            break;
+        case 13:
+            fn_1_495C8(2);
+            break;
+        case 14:
+            fn_1_495C8(10);
+            break;
+        case 15:
+            fn_1_495C8(18);
+            break;
+        }
+        fn_1_494DC(0x23);
+        fn_1_496FC(x, y);
+        fn_1_4954C(z);
+        fn_1_4955C(scale_x, scale_y);
+        fn_1_4962C();
+        fn_1_4CF3C(168.0f * scale_x, lbl_1_data_41A30,
+                   fn_1_14FEAC(entry->unk_81A4, entry->unk_81AC, entry->unk_81B4, buf, arg4));
+        return;
+    }
+    FN_1_135D7C_DRAW_GLYPH(glyph);
+}
+/* fzgx:end fn_1_135D7C */
+
 /* fzgx:begin fn_1_136174 noprologue */
 #include "types.h"
 
