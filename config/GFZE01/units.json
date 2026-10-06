@@ -15300,6 +15300,19 @@
   },
   {
     "module": "main",
+    "source": "dol/fn_80025504.c",
+    "symbols": [
+      "fn_80025504"
+    ],
+    "status": "matching",
+    "mw_version": "GC/1.2.5n",
+    "extra_cflags": [
+      "-opt",
+      "nopeephole"
+    ]
+  },
+  {
+    "module": "main",
     "source": "dol/fn_80025854.c",
     "symbols": [
       "fn_80025854"
