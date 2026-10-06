@@ -43077,6 +43077,21 @@
   },
   {
     "module": "main_rel",
+    "source": "rel/main_rel/motasglist/fn_1_42AD0.c",
+    "symbols": [
+      "fn_1_42AD0"
+    ],
+    "status": "matching",
+    "mw_version": null,
+    "extra_cflags": [],
+    "tu": "rel/main_rel/motasglist.c",
+    "pool": {
+      "@43": "lbl_1_rodata_F58",
+      "@45": "lbl_1_rodata_F60"
+    }
+  },
+  {
+    "module": "main_rel",
     "source": "rel/main_rel/motasglist/fn_1_42E74.c",
     "symbols": [
       "fn_1_42E74"
