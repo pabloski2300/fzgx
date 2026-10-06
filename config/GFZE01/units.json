@@ -18869,6 +18869,19 @@
   },
   {
     "module": "main",
+    "source": "dol/fn_8004D528.c",
+    "symbols": [
+      "fn_8004D528"
+    ],
+    "status": "matching",
+    "mw_version": "GC/1.3.2",
+    "extra_cflags": [
+      "-use_lmw_stmw",
+      "on"
+    ]
+  },
+  {
+    "module": "main",
     "source": "dol/fn_8004DE70.c",
     "symbols": [
       "fn_8004DE70"
