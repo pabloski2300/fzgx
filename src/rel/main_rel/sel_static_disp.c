@@ -1733,6 +1733,84 @@ void fn_1_139F18(Fn139F18Obj* self) {
 }
 /* fzgx:end fn_1_139F18 */
 
+/* fzgx:begin fn_1_13A21C noprologue */
+#include "types.h"
+#include "font.h"
+
+typedef struct fn_1_13A21C_Player {
+    u8 pad_0[0xE];
+    s16 character;
+    u8 pad_10[0x10];
+} fn_1_13A21C_Player;
+
+typedef struct fn_1_13A21C_Obj {
+    s16 player;
+    u8 pad_2[0x1E];
+    u8 *icons;
+    u8 pad_24[0x14];
+    f32 unk_38;
+    f32 unk_3C;
+    f32 unk_40;
+    f32 unk_44;
+    f32 unk_48;
+    f32 unk_4C;
+} fn_1_13A21C_Obj;
+
+extern fn_1_13A21C_Player lbl_1_bss_8B3A0[4];
+extern u8 lbl_1_bss_8CA28;
+extern const FontDrawPacket lbl_1_rodata_26F8; /* default draw packet */
+extern u8 fn_1_141F94(u32 arg0);
+extern void fn_1_8CED0(void *arg0, int arg1, int arg2);
+extern void fn_1_131C08(void);
+extern void fn_1_8D3F8(void *arg0, void *arg1, void *arg2, void *arg3);
+
+void fn_1_13A21C(fn_1_13A21C_Obj *obj) {
+    FontDrawPacket packet;
+    s32 offset;
+    s32 i;
+    s16 character;
+    u8 slot;
+
+    obj->unk_38 = 0.6f;
+    obj->unk_3C = -1.3f;
+    obj->unk_40 = -16.0f;
+    obj->unk_44 = 0.2f;
+    obj->unk_4C = 0.0f;
+    for (i = 0, offset = 0; i < 4; i++) {
+        character = lbl_1_bss_8B3A0[i].character;
+        slot = fn_1_141F94((u8)i);
+        if (character == -1) {
+            continue;
+        }
+        obj->player = i;
+        if (character == 0x20) {
+            obj->unk_48 = 1.12f;
+        } else if (character == 0x27) {
+            obj->unk_48 = 0.6f;
+        } else if (character == 0x1D) {
+            obj->unk_48 = 0.12f;
+        } else {
+            obj->unk_48 = 0.0f;
+        }
+        packet = lbl_1_rodata_26F8;
+        packet.x = (slot % 2) * 0x12D + 0xE3;
+        packet.y = (slot >> 1) * 0xCA + 0xB0;
+        packet.z = 161.0f;
+        packet.flags = 10;
+        if (lbl_1_bss_8CA28) {
+            packet.scale_x *= 2.0f;
+            packet.scale_y *= 2.0f;
+        }
+        packet.scale_x *= 1.1f;
+        packet.scale_y *= 1.1f;
+        fn_1_8CED0(obj->icons + offset, 0xA0, 0x78);
+        *(f32 *)(obj->icons + offset + 0x44) = 30.0f;
+        fn_1_8D3F8(obj->icons + offset, &packet, fn_1_131C08, obj);
+        offset += 0x64;
+    }
+}
+/* fzgx:end fn_1_13A21C */
+
 /* fzgx:begin fn_1_13A848 */
 void fn_1_13A848(s16 arg0, s16 arg1, void* arg2, void* arg3, int arg4, f32 arg5, f32 arg6) {
     fn_1_49410();
