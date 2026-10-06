@@ -38165,6 +38165,22 @@
   },
   {
     "module": "main_rel",
+    "source": "rel/main_rel/font/fn_1_51E60.c",
+    "symbols": [
+      "fn_1_51E60"
+    ],
+    "status": "matching",
+    "mw_version": null,
+    "extra_cflags": [],
+    "tu": "rel/main_rel/font.c",
+    "pool": {
+      "@46": "lbl_1_rodata_2758",
+      "@43": "lbl_1_rodata_2770",
+      "@44": "lbl_1_rodata_276C"
+    }
+  },
+  {
+    "module": "main_rel",
     "source": "rel/main_rel/font/fn_1_52070.c",
     "symbols": [
       "fn_1_52070"

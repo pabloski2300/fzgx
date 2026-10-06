@@ -6536,3 +6536,6 @@ rel/main_rel/sel_static_disp/fn_1_135D7C.c:
 
 rel/main_rel/motasglist/fn_1_42AD0.c:
 	.text       start:0x00042AD0 end:0x00042E74 align:4
+
+rel/main_rel/font/fn_1_51E60.c:
+	.text       start:0x00051E60 end:0x00052070 align:4
