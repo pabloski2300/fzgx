@@ -46365,6 +46365,26 @@
   },
   {
     "module": "main_rel",
+    "source": "rel/main_rel/sel_static_disp/fn_1_136174.c",
+    "symbols": [
+      "fn_1_136174"
+    ],
+    "status": "matching",
+    "mw_version": null,
+    "extra_cflags": [
+      "-pool",
+      "off"
+    ],
+    "tu": "rel/main_rel/sel_static_disp.c",
+    "pool": {
+      "@22": "lbl_1_rodata_8600",
+      "@18": "lbl_1_rodata_863C",
+      "@19": "lbl_1_rodata_85E8",
+      "@20": "lbl_1_rodata_8850"
+    }
+  },
+  {
+    "module": "main_rel",
     "source": "rel/main_rel/sel_static_disp/fn_1_136714.c",
     "symbols": [
       "fn_1_136714"
