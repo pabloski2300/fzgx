@@ -38227,6 +38227,20 @@
   },
   {
     "module": "main_rel",
+    "source": "rel/main_rel/font/fn_1_535A0.c",
+    "symbols": [
+      "fn_1_535A0"
+    ],
+    "status": "matching",
+    "mw_version": null,
+    "extra_cflags": [],
+    "tu": "rel/main_rel/font.c",
+    "pool": {
+      "@15": "lbl_1_rodata_282C"
+    }
+  },
+  {
+    "module": "main_rel",
     "source": "rel/main_rel/font/fn_1_5415C.c",
     "symbols": [
       "fn_1_5415C"

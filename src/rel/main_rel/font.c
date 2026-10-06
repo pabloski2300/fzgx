@@ -2542,6 +2542,69 @@ void fn_1_530C8(void * arg0) {
 #pragma opt_propagation reset
 /* fzgx:end fn_1_530C8 */
 
+/* fzgx:begin fn_1_535A0 noprologue */
+#include "types.h"
+#include "font.h"
+
+typedef struct Fn1_535A0_Color {
+    u8 r;
+    u8 g;
+    u8 b;
+    u8 a;
+} Fn1_535A0_Color;
+
+extern const FontDrawPacket lbl_1_rodata_26F8; /* default glyph packet */
+
+/* font.h declares the packet colour as u8[4]; it holds a GXColor */
+#define FN_1_535A0_COLOR(packet) (*(Fn1_535A0_Color *)(packet).color)
+
+void fn_1_535A0(Fn1_535A0_Color color, f32 x, f32 y, f32 z, f32 width, f32 height, f32 thickness) {
+    FontDrawPacket packet;
+
+    packet = lbl_1_rodata_26F8;
+    packet.image = 0x12;
+    packet.x = x;
+    packet.y = y;
+    packet.z = z;
+    packet.scale_x *= width / 8.0f;
+    packet.scale_y *= thickness / 8.0f;
+    FN_1_535A0_COLOR(packet) = color;
+    fn_1_4F734(&packet);
+
+    packet = lbl_1_rodata_26F8;
+    packet.image = 0x12;
+    packet.x = x;
+    packet.y = y;
+    packet.z = z;
+    packet.scale_x *= thickness / 8.0f;
+    packet.scale_y *= height / 8.0f;
+    FN_1_535A0_COLOR(packet) = color;
+    fn_1_4F734(&packet);
+
+    packet = lbl_1_rodata_26F8;
+    packet.image = 0x12;
+    packet.x = x;
+    packet.y = y + height;
+    packet.z = z;
+    packet.scale_x *= width / 8.0f;
+    packet.scale_y *= thickness / 8.0f;
+    packet.flags = 0xD;
+    FN_1_535A0_COLOR(packet) = color;
+    fn_1_4F734(&packet);
+
+    packet = lbl_1_rodata_26F8;
+    packet.image = 0x12;
+    packet.x = x + width;
+    packet.y = y;
+    packet.z = z;
+    packet.scale_x *= thickness / 8.0f;
+    packet.scale_y *= height / 8.0f;
+    packet.flags = 0x7;
+    FN_1_535A0_COLOR(packet) = color;
+    fn_1_4F734(&packet);
+}
+/* fzgx:end fn_1_535A0 */
+
 /* fzgx:begin fn_1_5415C */
 void fn_1_5415C(void *arg, s32 value) {
     fn_1_541A8(arg, value);
