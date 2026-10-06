@@ -58618,6 +58618,16 @@
   },
   {
     "module": "sample",
+    "source": "rel/sample/fn_18_444.c",
+    "symbols": [
+      "fn_18_444"
+    ],
+    "status": "matching",
+    "mw_version": null,
+    "extra_cflags": []
+  },
+  {
+    "module": "sample",
     "source": "rel/sample/keygen.c",
     "symbols": [
       "fn_18_3FC"
