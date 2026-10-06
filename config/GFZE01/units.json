@@ -17459,6 +17459,25 @@
   },
   {
     "module": "main",
+    "source": "dol/fn_80041EF8.c",
+    "symbols": [
+      "fn_80041EF8"
+    ],
+    "status": "matching",
+    "mw_version": "GC/1.3.2",
+    "extra_cflags": [
+      "-sdata",
+      "0",
+      "-sdata2",
+      "0"
+    ],
+    "pool": {
+      "@26": "lbl_80090018",
+      "@27": "lbl_80090038"
+    }
+  },
+  {
+    "module": "main",
     "source": "dol/fn_800420F4.c",
     "symbols": [
       "fn_800420F4"
