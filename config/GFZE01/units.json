@@ -13211,6 +13211,16 @@
   },
   {
     "module": "main",
+    "source": "dol/fn_8000D1F0.c",
+    "symbols": [
+      "fn_8000D1F0"
+    ],
+    "status": "matching",
+    "mw_version": null,
+    "extra_cflags": []
+  },
+  {
+    "module": "main",
     "source": "dol/fn_8000D55C.c",
     "symbols": [
       "fn_8000D55C"
