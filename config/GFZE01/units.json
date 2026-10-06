@@ -15220,6 +15220,30 @@
   },
   {
     "module": "main",
+    "source": "dol/fn_800244C8.c",
+    "symbols": [
+      "fn_800244C8"
+    ],
+    "status": "matching",
+    "mw_version": null,
+    "extra_cflags": [
+      "-fp_contract",
+      "off"
+    ],
+    "pool": {
+      "@11": "lbl_801A6FC0",
+      "@101": "lbl_801A6FC4",
+      "@102": "lbl_801A6FC8",
+      "@103": "lbl_801A6FCC",
+      "@104": "lbl_801A6FD0",
+      "@105": "lbl_801A6FD4",
+      "@109": "lbl_801A6FE0",
+      "@106": "lbl_801A6FD8",
+      "@107": "lbl_801A6FDC"
+    }
+  },
+  {
+    "module": "main",
     "source": "dol/fn_80024C88.c",
     "symbols": [
       "fn_80024C88"
