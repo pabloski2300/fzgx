@@ -6539,3 +6539,6 @@ rel/main_rel/motasglist/fn_1_42AD0.c:
 
 rel/main_rel/font/fn_1_51E60.c:
 	.text       start:0x00051E60 end:0x00052070 align:4
+
+rel/main_rel/archive/fn_1_12CEA8.c:
+	.text       start:0x0012CEA8 end:0x0012D254 align:4
