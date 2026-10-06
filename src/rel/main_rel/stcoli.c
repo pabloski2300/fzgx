@@ -1261,6 +1261,73 @@ void fn_1_21CA0(Fn_1_21CA0 *self, void *arg) {
 }
 /* fzgx:end fn_1_21CA0 */
 
+/* fzgx:begin fn_1_21CFC noprologue */
+#include "types.h"
+#include "dolphin/hw_regs.h"
+
+typedef struct {
+    f32 x;
+    f32 y;
+    f32 z;
+} fn_1_21CFC_Vec;
+
+extern void fn_1_18214();
+extern const f32 lbl_1_rodata_6D0; /* 0.0f */
+extern const f32 lbl_1_rodata_6E8; /* 0.5f */
+extern f32 lbl_8006D188(s16 angle);
+extern void lbl_8006E1B0(fn_1_21CFC_Vec *src, fn_1_21CFC_Vec *dst);
+extern void lbl_8006DAEC(void);
+extern void lbl_8006DCA4(void);
+extern void fn_80072558(void);
+extern void fn_8003462C(u32 type, u32 fmt, u32 count);
+extern void lbl_8006DB30(void);
+
+/* fzgx-allow: A1 GX FIFO write port; retail materialises it as lis 0xcc01/stfs -0x8000 */
+#define STCOLI_GX_WRITE_F32(v) (*(volatile f32 *)(GX_FIFO_BASE + 0x0) = (v)) /* Hardware access must remain ordered. */
+
+static inline void fn_1_21CFC_Position3f32(f32 x, f32 y, f32 z) {
+    STCOLI_GX_WRITE_F32(x);
+    STCOLI_GX_WRITE_F32(y);
+    STCOLI_GX_WRITE_F32(z);
+}
+
+void fn_1_21CFC(void *entity, fn_1_21CFC_Vec *scale, f32 t) {
+    f32 y;
+    f32 z;
+    fn_1_21CFC_Vec points[16];
+    fn_1_21CFC_Vec *point;
+    s32 i;
+    s32 angle;
+
+    fn_1_18214(entity, scale, NULL, t);
+    z = lbl_1_rodata_6D0;
+    point = points;
+    for (i = 0, angle = 0; i < 16; i++, angle += 0x1000) {
+        y = lbl_1_rodata_6E8 * lbl_8006D188(angle + 0x4000);
+        point->x = lbl_1_rodata_6E8 * lbl_8006D188(angle);
+        point->y = y;
+        point->z = z;
+        point->x *= scale->x;
+        point->y *= scale->y;
+        lbl_8006E1B0(point, point);
+        point++;
+    }
+    lbl_8006DAEC();
+    lbl_8006DCA4();
+    fn_80072558();
+    point = points;
+    fn_8003462C(0xB0, 0, 17);
+    for (i = 0; i < 16; i++) {
+        fn_1_21CFC_Position3f32(point->x, point->y, point->z);
+        point++;
+    }
+    STCOLI_GX_WRITE_F32(points[0].x);
+    STCOLI_GX_WRITE_F32(points[0].y);
+    STCOLI_GX_WRITE_F32(points[0].z);
+    lbl_8006DB30();
+}
+/* fzgx:end fn_1_21CFC */
+
 /* fzgx:begin fn_1_22E8C */
 typedef struct Fn_1_22E8CInput {
     unsigned char pad00[0x04];

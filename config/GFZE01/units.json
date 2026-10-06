@@ -50791,6 +50791,17 @@
   },
   {
     "module": "main_rel",
+    "source": "rel/main_rel/stcoli/fn_1_21CFC.c",
+    "symbols": [
+      "fn_1_21CFC"
+    ],
+    "status": "matching",
+    "mw_version": null,
+    "extra_cflags": [],
+    "tu": "rel/main_rel/stcoli.c"
+  },
+  {
+    "module": "main_rel",
     "source": "rel/main_rel/stcoli/fn_1_22E8C.c",
     "symbols": [
       "fn_1_22E8C"
